@@ -1,3 +1,4 @@
+import Button from 'react-bootstrap/Button';
 
 
 const Signup = () => {
@@ -18,8 +19,9 @@ const Signup = () => {
                     <label>Repeat Password:</label>
                     <input type="text" placeholder="Repeat Password" />
                 </div>
-
-                <button type="submit">Create Account</button>
+                
+                <Button as="input" type="submit" value="Submit" />{''}
+                
             </form>
         </div>
     )
