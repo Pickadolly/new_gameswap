@@ -1,95 +1,61 @@
-import React, { useState } from 'react';
-import './CreateAuction.css';
-import Navbar from './navbar';
+import React from 'react';
+import NavBarElement from './navbar';
 
+function AuctionBuilder() {
+  const [auctionName, modifyAuctionName] = React.useState('');
+  const [auctionPrice, modifyAuctionPrice] = React.useState('');
 
-
-function CreateAuction() {
-  const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
-  const [description, setDescription] = useState('');
-  const [pictures, setPictures] = useState([]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // title starting price
-    setName('');
-    setPrice('');
-    setDescription('');
-    setPictures([]);
+  const processFormSubmission = event => {
+    event.preventDefault();
+    modifyAuctionName('');
+    modifyAuctionPrice('');
   };
 
-  const handlePictureUpload = (e) => {
-    const uploadedPictures = Array.from(e.target.files);
-    setPictures(uploadedPictures);
+  const formContainerStyles = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
   };
+
+  const contentStyles = {
+    textAlign: 'center',
+    marginTop: '-200px',
+  };
+
+  const inputContainerStyles = { marginBottom: '20px' };
 
   return (
-    
-    <div className="center-container">
-     <div className="center-content">
-     <Navbar />
-
-    <h1 className="create-auction-title">Create Auction</h1>
-
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name: </label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="price">Price: </label>
-          <input
-            type="number"
-            id="price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-  <label htmlFor="description">Description: </label>
-  <textarea
-    id="description"
-    value={description}
-    onChange={(e) => setDescription(e.target.value)}
-    required
-    className="textarea-spacing" 
-  ></textarea>
-</div>
-
-        <div className="form-group">
-          <label htmlFor="pictures">Upload Pictures: </label>
-          <input
-            type="file"
-            id="pictures"
-            multiple
-            accept="image/*"
-            onChange={handlePictureUpload}
-          />
-        </div>
-        <div>
-          {pictures.map((picture, index) => (
-            <img
-              key={index}
-              src={URL.createObjectURL(picture)}
-              alt={`Uploaded ${index + 1}`}
-              width="100"
+    <div style={formContainerStyles}>
+      <div style={contentStyles}>
+        <NavBarElement />
+        <h1 style={{ marginTop: '50px' }}>Create New Auction</h1>
+        <form onSubmit={processFormSubmission}>
+          <div style={inputContainerStyles}>
+            <label htmlFor="auctionTitle">Title: </label>
+            <input
+              type="text"
+              id="auctionTitle"
+              value={auctionName}
+              onChange={e => modifyAuctionName(e.target.value)}
+              required
             />
-          ))}
-        </div>
-        <button type="submit">Create Auction</button>
-      </form>
-    </div>
+          </div>
+          <div style={inputContainerStyles}>
+            <label htmlFor="auctionStartPrice">Starting Bid: </label>
+            <input
+              type="number"
+              id="auctionStartPrice"
+              value={auctionPrice}
+              onChange={e => modifyAuctionPrice(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Initiate Auction</button>
+        </form>
+      </div>
     </div>
   );
 }
 
-export default CreateAuction;
+export default AuctionBuilder;
