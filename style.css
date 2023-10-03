@@ -1,0 +1,251 @@
+.nav-bar {
+    background-color: blueviolet;
+}
+
+.menu-bar {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 20px;
+}
+
+.gameswap {
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    position: relative;
+    bottom: 20px;
+}
+
+.icon {
+    margin-left: 20px;
+}
+
+.sign-up {
+    color: white;
+    font-size: 20px;
+    margin-left: 1200px;
+    position: relative;
+    bottom: 40px;
+}
+
+.log-in {
+    color: white;
+    font-size: 20px;
+    margin-left: 40px;
+    position: relative;
+    bottom: 40px;
+}
+
+.search-bar {
+    position: relative;
+    bottom: 20px;
+}
+
+.search-icon {
+    color: white;
+    position: relative;
+    bottom: 18px;
+}
+
+.hotgame {
+    color: white;
+    font-size: 20px;
+    margin-left: 40px;
+    position: relative;
+    bottom: 20px;
+}
+
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    bottom: 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: blueviolet;
+    min-width: 200px;
+    z-index: 1;
+    margin-left: 10px; 
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+/* home page main.html */
+
+.game-section .container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    gap:1.5rem;
+}
+.box{
+    padding:3rem 2rem;
+    margin-top: 200px;
+}
+
+.super-mario,.ufc3,.left4dead{
+    width: 100px;
+    height: 150px;
+}
+
+/* sign up sign-up.html */
+.signUpBox{
+    margin-top: 100px;
+    background-color: gray;
+    width: 600px;
+    height: 300px;
+    margin-left: 400px;
+}
+.signUp{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    width: 400px;
+    height: 40px;
+    margin-left:2px;
+    margin-top: 10px;
+}
+.password{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.signUp-h1{
+    text-align: center;
+}
+
+.create-button{
+    margin-top: 20px;
+}
+
+/* Log in log-in.html */
+
+.logInBox{
+    margin-top: 100px;
+    background-color: gray;
+    width: 600px;
+    height: 300px;
+    margin-left: 400px;
+}
+.logIn{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    width: 400px;
+    height: 40px;
+    margin-left:2px;
+    margin-top: 10px;
+}
+.password{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.logIn-h1{
+    text-align: center;
+}
+
+.logIn-button{
+    margin-top: 20px;
+}
+
+/* Hot games hot-games-html */
+
+.Fifa-2023,
+.Warfare-3,
+.mario-tennis{
+    width: 100px;
+    height: 150px;
+}
+
+/* Contact us and about us page. Contact-us.html */
+.contact-us{
+    margin-right: 500px;
+}
+.contactUS{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    width: 400px;
+    height: 40px;
+    margin-left:2px;
+    margin-top: 10px;
+}
+.email{
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+}
+.message{
+    width: 400px;
+    height: 250px;
+    margin-top: 10px;
+}
+.contactUs-h1{
+    text-align: center;
+}
+
+.send-button{
+    margin-top: 10px;
+}
+
+.about-us{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:500px;
+    height: 300px;
+    margin-left: 800px;
+    position: relative;
+    bottom:570px;
+}
+.about-us-box{
+    padding:3rem 2rem;
+    margin-top: 200px;
+}
+.logged-in{
+    color:white;
+    font-size: 20px;
+    margin-left: 1200px;
+    position :relative;
+    bottom: 43px;
+}
