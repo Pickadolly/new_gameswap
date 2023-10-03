@@ -1,3 +1,5 @@
+import React from 'react';
+import Navbar from './Navbar'; 
 var dropdownBtn = document.querySelector(".dropbtn");
 
   // Lägg till en klickhändelse för att visa/dölja dropdown-innehållet
@@ -17,3 +19,15 @@ var dropdownBtn = document.querySelector(".dropbtn");
       });
     }
   });
+
+  function App() {
+    return (
+      <div>
+        {/* Other components */}
+        <Navbar />
+        {/* Other components */}
+      </div>
+    );
+  }
+  
+  export default App;
